@@ -299,6 +299,9 @@ let isAdultPresent = null;
 
 // Complete the exercise in the space below:
 
+isAdultPresent = devs.some((dev) => {
+return dev.year >= 2007;    
+});
 // Check your work:
 console.log('Exercise 6 my result: ', isAdultPresent);
 console.log('Exercise 6 correct result: ', true);
@@ -320,6 +323,10 @@ let isEveryone19OrOlder = null;
 
 // Complete the exercise in the space below:
 
+isEveryone19OrOlder = devs.every((dev) => {
+    return dev.year <= 2006;
+})
+
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder);
 console.log('Exercise 7 correct result: ', false);
@@ -337,6 +344,11 @@ let commentById = {};
 
 // Complete the exercise in the space below:
 
+commentById = comments.find((comment) => {
+    return comment.id === 823423;
+}
+);
+
 // Check your work:
 console.log('Exercise 8 my result: ', commentById);
 console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 });
@@ -353,6 +365,11 @@ of comment objects.
 let idx = null;
 
 // Complete the exercise in the space below:
+
+idx = comments.findIndex((comment) => {
+    return comment.id === 123523;
+}
+)
 
 // Check your work:
 console.log('Exercise 9 my result: ', idx);
