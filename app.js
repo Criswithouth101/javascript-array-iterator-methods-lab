@@ -201,6 +201,11 @@ let inventorNamedAda = {};
 
 // Complete the exercise in the space below:
 
+inventorNamedAda = inventors.find((inventor) => {
+    return inventor.first === 'Ada';
+}
+);
+
 // Check your work:
 console.log('Exercise 4 my result: ', inventorNamedAda);
 console.log('Exercise 4 correct result: ', {
@@ -225,6 +230,14 @@ Hint: Use the String.prototype.split() method to separate the first and last
 let firstLast = [];
 
 // Complete the exercise in the space below:
+
+firstLast = people.map((person) => {
+    const part = person.split(', ');
+    firstName = part[1];
+    lastName = part[0];
+    fullName = firstName + ' ' + lastName;
+    return fullName
+});
 
 // Check your work:
 console.log('Exercise 5 my result: ', firstLast);
